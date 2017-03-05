@@ -1,0 +1,86 @@
+<div>
+	<div class="">
+		<h2>Add new product</h2>
+		<form name="myForm" role="form" ng-submit="addProduct()" class="css-form form-horizontal" novalidate>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="name">Name:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="model" ng-model="product.name" name="name"
+					required> 
+					<span style="color: red" ng-show="myForm.name.$dirty && myForm.name.$invalid"> 
+					<span ng-show="myForm.name.$error.required">Name is required.</span></span>
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="model">Model:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="model" ng-model="product.model" name="model"
+					required>
+					<span style="color: red" ng-show="myForm.model.$dirty && myForm.model.$invalid"> 
+					<span ng-show="myForm.model.$error.required">Model is required.</span></span>
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="year">Year:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="year" ng-model="product.year" required name="year">
+					<span style="color: red" ng-show="myForm.year.$dirty && myForm.year.$invalid"> 
+					<span ng-show="myForm.year.$error.required">Year is required.</span></span>
+				</div>			
+				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="price">Price:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="price" ng-model="product.price" required name="price">
+					<span style="color: red" ng-show="myForm.price.$dirty && myForm.price.$invalid"> 
+					<span ng-show="myForm.price.$error.required">Price is required.</span></span>
+				</div>	
+									
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="producer">Producer:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="producer" ng-model="product.producer" required name="producer">
+					<span style="color: red" ng-show="myForm.producer.$dirty && myForm.producer.$invalid"> 
+					<span ng-show="myForm.producer.$error.required">Producer is required.</span></span>
+				</div>					
+					
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="available">Available:</label> 
+				<div class="col-sm-10">
+					<input type="text"
+					class="form-control" id="available" ng-model="product.available" required name="available">
+					<span style="color: red" ng-show="myForm.available.$dirty && myForm.available.$invalid"> 
+					<span ng-show="myForm.available.$error.required">Available is required.</span></span>					
+				</div>		
+				
+			</div>
+			
+			<label class="control-label col-sm-2" ></label> 
+				<div class="col-sm-10">
+					<button type="submit" class="btn btn-default" 
+					ng-disabled="myForm.name.$dirty && myForm.name.$invalid || 
+						myForm.model.$dirty && myForm.model.$invalid ||
+						myForm.year.$dirty && myForm.year.$invalid ||
+						myForm.price.$dirty && myForm.price.$invalid ||
+						myForm.producer.$dirty && myForm.producer.$invalid ||
+						myForm.available.$dirty && myForm.available.$invalid">Add Product</button>
+						
+						<button type="button" class="btn btn-default" ng-click="searchAll()">Search all</button>
+				</div>	
+			
+		</form>
+	</div>
+
+	<my-directive></my-directive>>
+	
+</div>

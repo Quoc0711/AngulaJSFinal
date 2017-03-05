@@ -1,0 +1,33 @@
+.menu-list{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.home-section{
+    float:left;
+    width: 100%;
+}
+.section{
+    margin-left: 10%;
+    float:left;
+}
+.photo{
+    padding-right: 5px;
+}
+input.ng-invalid {
+    background-color:#ff6699;
+}
+input.ng-valid {
+    background-color: #66ffcc;
+}
+
+
+div.col-md-2, div.col-md-6{
+	padding: 5px;
+}
+
+
+@media (min-width: 768px){
+	.form-horizontal .control-label {  
+    text-align: left !important;
+}
+}

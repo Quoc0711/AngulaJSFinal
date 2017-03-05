@@ -1,0 +1,35 @@
+<div class="">
+		<h2>Product List</h2>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Model</th>
+					<th>Year</th>
+					<th>Price</th>
+					<th>Producer</th>
+					<th>Available</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="x in products">
+				<td>									
+					<a href="#/detail/{{x.id}}">{{x.name |uppercase}}</a>
+				</td>
+				<td>{{x.model}}</td>
+				<td>{{x.year}}</td>
+				<td>{{x.price | currency}}</td>
+				<td>{{x.producer}}</td>
+
+				<td style="display: flex"><i class="glyphion glyphion-plus btn btn-sm btn-success"
+					ng-click="increaseAvailable($index)">+</i>
+					<div style="margin:0px 5px">{{x.available | currency : "" : 0}}</div> <i
+					class="glyphion glyphion-mins btn btn-sm btn-warning"
+					ng-click="decreaseAvailable($index)">-</i></td>
+				<td><i class="glyphicon glyphicon-trash btn btn-danger"
+					ng-click="deleteProduct($index)"></i></td>
+			</tbody>
+		</table>
+		
+	</div>
